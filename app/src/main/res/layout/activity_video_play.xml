@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VideoPlayActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.media3.ui.PlayerView
+            android:id="@+id/playerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:use_controller="true"
+            app:buffered_color="#ffffff"
+            app:played_color="#ff0000"
+            app:resize_mode="fit"
+
+            />
+    </FrameLayout>
+
+    <ImageButton
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rotateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginEnd="36dp"
+
+        android:layout_marginBottom="56dp"
+        android:src="@drawable/fullscreen_24"
+        android:background="?android:selectableItemBackground"
+        app:tint="#ffffff" />
+
+
+</RelativeLayout>

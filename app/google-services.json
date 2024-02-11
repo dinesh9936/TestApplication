@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "808364931409",
+    "project_id": "testapplication-a18b2",
+    "storage_bucket": "testapplication-a18b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808364931409:android:e9e7d34dab4fa1b29c7b70",
+        "android_client_info": {
+          "package_name": "com.rama.apps.testapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJC_iziTSSIir-QwQix-cRyYGe_gPXb40"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
