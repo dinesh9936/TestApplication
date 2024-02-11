@@ -1,13 +1,15 @@
-## Getting Started
 
-To get started with this project, follow these steps:
+2. Open the project in Android Studio.
 
+3. Build and run the app on your device or emulator.
 
-## Getting Started
+## Screenshots
 
-To get started with this project, follow these steps:
-
-| Screenshot 1                          | Screenshot 2                          |
-| ------------------------------------- | ------------------------------------- |
-| ![Screenshot 1](https://github.com/dinesh9936/TestApplication/assets/46622904/d62293cb-f220-4374-b34f-ba6fe1961878)| ![Screenshot 3](https://github.com/dinesh9936/TestApplication/assets/46622904/77c135ee-c467-4d11-a210-fbabbdb93d05)      |
-| ![Screenshot 2](https://github.com/dinesh9936/TestApplication/assets/46622904/1f4f20e1-fe9c-4616-ba82-85baba474c9f)|                                       |
+<div>
+<img src="https://github.com/dinesh9936/TestApplication/assets/resized/image1.png" width="400" />
+<img src="https://github.com/dinesh9936/TestApplication/assets/resized/image2.png" width="400" />
+</div>
+<div>
+<img src="https://github.com/dinesh9936/TestApplication/assets/resized/image3.png" width="400" />
+<img src="https://github.com/dinesh9936/TestApplication/assets/resized/image4.png" width="400" />
+</div>
