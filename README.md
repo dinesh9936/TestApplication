@@ -14,7 +14,7 @@ This Android app demonstrates how to integrate ExoPlayer for video playback alon
 
 To get started with this project, follow these steps:
 
-![WhatsApp Image 2024-02-11 at 20 06 19](https://github.com/dinesh9936/TestApplication/assets/46622904/d62293cb-f220-4374-b34f-ba6fe1961878)
-![WhatsApp Image 2024-02-11 at 20 06 19 (2)](https://github.com/dinesh9936/TestApplication/assets/46622904/1f4f20e1-fe9c-4616-ba82-85baba474c9f)
+![WhatsApp Image 2024-02-11 at 20 06 19](https://github.com/dinesh9936/TestApplication/assets/46622904/d62293cb-f220-4374-b34f-ba6fe1961878 | width = 100)
+![WhatsApp Image 2024-02-11 at 20 06 19 (2)](https://github.com/dinesh9936/TestApplication/assets/46622904/1f4f20e1-fe9c-4616-ba82-85baba474c9f | width = 100)
 
-![WhatsApp Image 2024-02-11 at 20 06 19 (1)](https://github.com/dinesh9936/TestApplication/assets/46622904/77c135ee-c467-4d11-a210-fbabbdb93d05)
+![WhatsApp Image 2024-02-11 at 20 06 19 (1)](https://github.com/dinesh9936/TestApplication/assets/46622904/77c135ee-c467-4d11-a210-fbabbdb93d05 | width = 100)
