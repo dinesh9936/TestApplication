@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
+import android.view.Window
+import android.view.WindowManager
 import androidx.core.content.ContextCompat
 import androidx.media3.common.MediaItem
 import androidx.media3.common.PlaybackException
@@ -53,6 +55,9 @@ class VideoPlayActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityVideoPlayBinding.inflate(layoutInflater)
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(binding.root)
 
 
@@ -168,11 +173,14 @@ class VideoPlayActivity : AppCompatActivity() {
                             rewardedAd = null
                             resumeVideo()
                         }
+
+
                     }
 
 
                     showRewardedAd()
                 }
+
             }
         )
     }

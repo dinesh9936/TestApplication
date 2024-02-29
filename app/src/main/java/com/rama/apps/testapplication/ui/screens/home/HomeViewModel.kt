@@ -3,6 +3,7 @@ package com.rama.apps.testapplication.ui.screens.home
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.rama.apps.testapplication.MainActivity
 import com.rama.apps.testapplication.data.model.Video
 import com.rama.apps.testapplication.data.repository.AppRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -27,10 +28,10 @@ class HomeViewModel @Inject constructor(
     val videos: StateFlow<List<Video>> get() = _videos.asStateFlow()
 
     init {
-        fetchMovies()
+        fetchMovies(activity = MainActivity())
     }
 
-    private fun fetchMovies() {
+    private fun fetchMovies(activity: MainActivity) {
         Log.d(TAG, "fetchMovies: ")
         viewModelScope.launch {
             appRepository.getMovies().collect {

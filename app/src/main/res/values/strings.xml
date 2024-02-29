@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">TestApplication</string>
     <string name="thumnailDescription">Thumbnail</string>
+    <string name="enter_your_phone">Enter your phone number.</string>
+    <string name="enter_your_otp">Enter your otp.</string>
+    <string name="otp_sent_message">OTP has been sent on your </string>
+    <string name="button_verify_otp">Verify Your OTP</string>
+    <string name="button_send_otp">Send OTP</string>
 </resources>

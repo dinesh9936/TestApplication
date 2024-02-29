@@ -3,6 +3,7 @@ package com.rama.apps.testapplication.di
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.media3.exoplayer.ExoPlayer
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.rama.apps.testapplication.utils.UserPreferences
@@ -17,6 +18,9 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+
+
+
 
     @Singleton
     @Provides
@@ -36,6 +40,11 @@ object AppModule {
     }
 
 
+    @Singleton
+    @Provides
+    fun provideFirebaseAuth(): FirebaseAuth{
+        return FirebaseAuth.getInstance()
+    }
     @Provides
     fun provideVideoPlayer(@ApplicationContext context: Context): ExoPlayer {
         return ExoPlayer.Builder(context)

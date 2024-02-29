@@ -1,7 +1,11 @@
 package com.rama.apps.testapplication.ui.screens.settings
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.google.firebase.auth.FirebaseAuth
+import com.rama.apps.testapplication.data.repository.AppRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 
@@ -11,5 +15,19 @@ import javax.inject.Inject
  */
 
 @HiltViewModel
-class SettingViewModel @Inject constructor(): ViewModel(){
+class SettingViewModel @Inject constructor(
+    private val appRepository: AppRepository,
+): ViewModel(){
+
+
+    fun logOut(){
+        viewModelScope.launch {
+            appRepository.logOut()
+
+        }
+    }
+
+
+
+
 }

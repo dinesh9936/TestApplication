@@ -1,6 +1,5 @@
 package com.rama.apps.testapplication.ui.screens.settings
 
-import android.widget.Space
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -13,10 +12,10 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Switch
-import androidx.compose.material3.SwitchColors
 import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -28,9 +27,18 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.rama.apps.testapplication.ui.theme.Purple40
+import androidx.compose.ui.viewinterop.AndroidView
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavController
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
+import com.rama.apps.testapplication.ui.base.Screens
+import com.rama.apps.testapplication.ui.theme.Primary
 import com.rama.apps.testapplication.utils.UserPreferences
 
 
@@ -41,9 +49,12 @@ import com.rama.apps.testapplication.utils.UserPreferences
 
 @Composable
 fun SettingScreen(
-    userPreferences: UserPreferences
+    navController: NavController,
+    userPreferences: UserPreferences,
+    settingViewModel: SettingViewModel = hiltViewModel<SettingViewModel>()
 ) {
     var checked by remember { mutableStateOf(false) }
+    val context = LocalContext.current
 
     LaunchedEffect(userPreferences){
         checked = userPreferences.setAutoPlay
@@ -52,9 +63,10 @@ fun SettingScreen(
         modifier = Modifier
             .fillMaxSize()
             .padding(20.dp),
-        verticalArrangement = Arrangement.Center,
+        verticalArrangement = Arrangement.SpaceBetween,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        AdView(adUnitId = "ca-app-pub-3940256099942544/6300978111")
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.Center,
@@ -84,7 +96,7 @@ fun SettingScreen(
                 modifier = Modifier.height(SwitchDefaults.IconSize / 4), // Adjust the height as needed
                 colors = SwitchDefaults.colors(
                     checkedThumbColor = Color.White,
-                    checkedTrackColor = Purple40,
+                    checkedTrackColor = Primary,
                     uncheckedThumbColor = Color.Gray,
                     uncheckedTrackColor = MaterialTheme.colorScheme.secondaryContainer,
                 )
@@ -94,8 +106,33 @@ fun SettingScreen(
 
         }
 
+        Button(
+            onClick = {
+                settingViewModel.logOut()
+                navController.navigate(route = Screens.Login.route)
+        },
+            shape = RectangleShape
+        ) {
+            Text(text = "LogOut")
+        }
+
     }
 
+}
+
+@Composable
+fun AdView(adUnitId: String){
+    AndroidView(
+        modifier = Modifier
+            .fillMaxWidth(),
+        factory = { context ->
+            AdView(context).apply {
+                setAdUnitId(adUnitId)
+                setAdSize(AdSize.BANNER)
+                loadAd(AdRequest.Builder().build())
+            }
+        }
+    )
 }
 
 

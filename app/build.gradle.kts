@@ -76,13 +76,14 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("com.google.firebase:firebase-messaging:23.4.0")
+    implementation("com.google.firebase:firebase-messaging:23.4.1")
+    implementation("com.google.firebase:firebase-auth:22.3.1")
     kapt ("com.google.dagger:hilt-compiler:2.50")
 
 
     //implementation ("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
-    kapt ("androidx.hilt:hilt-compiler:1.1.0")
-    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
+    kapt ("androidx.hilt:hilt-compiler:1.2.0")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
 
 
     val lifecycleVersion = "2.7.0"
@@ -96,6 +97,8 @@ dependencies {
     implementation ("androidx.navigation:navigation-compose:2.7.7")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
 
+    //firebase
+    implementation("com.google.firebase:firebase-appcheck-debug:17.1.2")
 
     //retrofit
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
@@ -114,11 +117,14 @@ dependencies {
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation("androidx.activity:activity-compose:1.8.2")
+
     implementation(platform("androidx.compose:compose-bom:2023.08.00"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
+
+
     implementation("com.google.firebase:firebase-database:20.3.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
